@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cloudly Software Case Study - Talha Erden
 
-## Getting Started
+Bu repository, Cloudly Software teknik değerlendirmesi kapsamında hazırlanan Backend ve Frontend projelerini içerir.
 
-First, run the development server:
+## Proje Yapısı
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Bu repo iki ana bölümden oluşmaktadır:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1.  **cloudly-backend:** NestJS ile geliştirilmiş, Clean Architecture prensiplerine sahip Multi-Tenant Proje Yönetim API'si.
+2.  **cloudly-frontend:** Next.js ile geliştirilmiş, DummyJSON API kullanan, sürükle-bırak destekli Analitik Dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 1. Backend (NestJS) Kurulum ve Çalıştırma
 
-## Learn More
+Backend projesi, "Task Move Challenge" ve Swagger dökümantasyonunu içerir.
 
-To learn more about Next.js, take a look at the following resources:
+1.  Terminalde backend klasörüne gidin:
+    ```bash
+    cd cloudly-backend
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  Bağımlılıkları yükleyin ve projeyi başlatın:
+    ```bash
+    npm install
+    npm run start:dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **API URL:** `http://localhost:3000`
+* **Swagger UI:** `http://localhost:3000/api` (Tüm endpoint'leri buradan test edebilirsiniz)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 2. Frontend (Next.js) Kurulum ve Çalıştırma
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Frontend projesi, Zustand state yönetimi ve Drag & Drop widget yapısını içerir.
+
+1.  Yeni bir terminalde frontend klasörüne gidin:
+    ```bash
+    cd cloudly-frontend
+    ```
+
+2.  Bağımlılıkları yükleyin ve projeyi başlatın:
+    ```bash
+    npm install
+    npm run dev
+    ```
+
+* **Uygulama URL:** `http://localhost:3001` (veya 3000 portu doluysa terminalde belirtilen port)
+
+---
+
+## 🛠 Kullanılan Teknolojiler
+
+* **Backend:** NestJS, TypeScript, TypeORM, SQLite, Swagger, Class-Validator
+* **Frontend:** Next.js (App Router), Tailwind CSS, Zustand, dnd-kit (Drag & Drop), Recharts
+
+---
+
+## ✅ Tamamlanan Challenge'lar
+
+* [x] **Backend:** Farklı organizasyonlar arası görev taşıma engeli (Security Logic).
+* [x] **Backend:** Adım adım Git commit geçmişi.
+* [x] **Frontend:** Polymorphic Widget yapısı (Chart, Table, Stat).
+* [x] **Frontend:** Global Filtreleme (Kategori bazlı).
+* [x] **Frontend:** Sayfa yenilendiğinde widget sıralamasının korunması (LocalStorage).
