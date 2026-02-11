@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react'; // <--- 1. useState EKLENDİ
+import React, { useEffect, useState } from 'react'; // <--- 1. useState EKLENDİİ
 import {
   DndContext,
   closestCenter,
